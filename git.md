@@ -32,6 +32,7 @@
 	- backward
 		- git reset --soft HEAD\~2
 	- forward
+		- git reset 'HEAD@{2}'
 		- git reset --hard <commit_id>
 
 - see what is in a stash:
