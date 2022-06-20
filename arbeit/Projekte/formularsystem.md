@@ -222,7 +222,6 @@ API description
 	- / <- gibt züruck die 20 neuste Log Einträge
 
 **forms.py**
-
 	- /ready_orders <- nimmt Aufträge aus Weclapp, deren das Produktionsfreigabe Feld (6200039, i5mtpjhr200t7j) gleich "2. An Kunden versenden" (6200051) ist.
 	Die Einträge, die in der Datenbank in OpenForms sind, haben das "hasForm=true" und haben andere Knopfe.
 	**Es mach keine Änderungen in WeClapp**
@@ -231,17 +230,33 @@ API description
 	**Es wechselt auch das Feld ProduktionsFreigabe zu 3. Versandt. Warten auf Kunde in WeClapp**
 
 	- /generate_form <- erstellt in der Datenbank in OpenForms Tabelle, einen Eintrag mit den Daten von dem Kund und Formular Spezifikation. ID von dem Form wird automatisch generiert.
-	**Es mach keine Änderungen in WeClapp**
+	**Es macht keine Änderungen in WeClapp**
 
 	- /delete_form <- löscht die Form von der Datenbank
-	**Es mach keine Änderungen in WeClapp**
+	**Es macht keine Änderungen in WeClapp**
 
 	- /get_form/{form_id}/{zipcode} <- gibt die Form daten züruck
-	**Es mach keine Änderungen in WeClapp**
+	**Es macht keine Änderungen in WeClapp**
 
-	- /check_form
+	- /check_form <- Prüft über, ob den Formular existiert und falls existiert, ob angegeben PLZ stimmt für den Form
+	**Es macht keine Änderungen in WeClapp**
 
+	- /sign_form <- Ein Endpunkt, wenn ein Kund den Form erfüllt. Dann erstellen wir ein pdf von dem Formular, löschen den Form von der Datenbank, schicken wir Emails an den Kund und Firma, wechseln wir das Feld "Produktionsfreigabe" in WeClapp
+	**Es MACHT Änderungen in WeClapp**
 
+**login.py**
+	Keine API
+
+	- generete_token() <- Generiert einen JWT Token und gibt es zurück
+
+	- get_token() <- Pruft über, ob es ein Benutzer in UserDB ist. Ob ja prüft ob das Passwort in Leadwiesel passt. Wenn nein, erstellt einen Benutzer in der Datenbank, wenn er in Leadwiesel ist.
+
+	- check_token() <- Pruft über, ob der Token korrekt ist
+
+**server.py**
+	- @server.middleware("http") - Prüft über, ob der Benutzer von dem System, eine gültiger Token hat.
+
+	- /webhook/{tenant_id} <- es ist von automatisch WeClapp aufgeruft, wenn von einem Auftrag eine UPDATE Änderung gibt. Dann, wenn der Status von dem Produktionsfreigabe zu Status 2 ist, erstellen wir einen Form in der Datenbank und schicken wir eine Email an den Kund.
 
 **DATENBANK KOPIEREN**
 WSL -> WIN cp d3-db.sqlite /mnt/c/Users/a.szulc/

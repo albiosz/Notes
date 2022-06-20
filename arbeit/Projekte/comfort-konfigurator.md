@@ -12,9 +12,11 @@ TODO
 	- Zurück Knopf soll grau sein, kein wirklicher Knopf [x]
 	- Zwischen dem Holz und Progress Bar soll mehr Abstand sein [x]
 	- Zwischen dem Header und sub bar soll auch immer Abstand sein [x]
-	- Stell Emailsadresse ein []
 	- Lösch den Schritt mit Farbe [x]
 	- zuruck tifer und kleiner [x]
 	- Texte ändern [x]
 	- Bug mit züruck [x]
 	- Die Anzahl zeigen, zu viel Text [x]
+	- Stell Emailsadresse ein []
+		- 
+

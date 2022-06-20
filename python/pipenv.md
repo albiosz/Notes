@@ -5,3 +5,5 @@ pipenv install flask==0.12.1    <- Um eine Bibliotheke zu installieren
 pipenv install fastapi
 pipenv install uvicorn
 
+# Später ausführen
+pip shell
