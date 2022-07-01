@@ -1,5 +1,8 @@
-Um mail in einer App zu testen
+Um mail in einer App zu testen:
 https://github.com/rnwood/smtp4dev/wiki/Installation
+
+Anzufangen:
+smtp4dev
 
 Man muss die Emails von name@localhost schicken. Dann wird man die Emails in localhost:5000 sehen
 

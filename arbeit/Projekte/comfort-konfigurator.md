@@ -4,6 +4,8 @@ M:\WEB\comfort-garagen.de\Umsetzung.git
 https://www.aroundhome.de/fenster/formular/ <- es soll gleich wie hier aussehen
 - Konfigurator soll eine unterseite Sein
 
+- um Sass zu kompilieren
+ npm run compile:sass
 
 TODO
 	- Lösch die Schritte, die mit Wandfelder was zu tun haben [x]

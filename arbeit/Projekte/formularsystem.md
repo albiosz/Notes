@@ -135,6 +135,8 @@ Backend
  - sudo systemctl restart uvicorn-d3 <- restart
  - sudo systemctl status uvicorn-d3 <- Überprüfen, ob das System funktioniert
 
+ Backend adjusted to work also with MC
+
 
 
 **Frontend**

@@ -24,10 +24,9 @@ node tools/listener.js
 - Schmeiß das Check box auf dem ContactForm Bildshirm [x]
 - Hinzufügt das Checkbox zu Formularseite [x]
 
-f863438
 
-$("#back-button-id").addClass("back-space-back");
+Probleme mit zurück Knopf:
+- wenn ich den Konfigurator eintrette mit nachvorne Knopf, gibt es keinen Name in Url []
+- 
 
-$("#back-button-id").removeClass("back-space-back");
 
-git commit -m "Bestätigung Zeichnung centriert, checkbox auf der Kontaktseite gelöscht, 

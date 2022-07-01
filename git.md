@@ -1,5 +1,5 @@
 
-##REMOVING
+## REMOVING
 - remove file from git add
 	- git reset <file>
 - remove branch
@@ -9,21 +9,34 @@
  	- remotely
 		git push origin --delete remoteBranchName
 
-##REBASE
+## REBASE
 - rebase z masterem
 	- git rebase master
 	- merge conflicts
 	- git add ./file <- for files which conflicts were solved. This add means that conflicts were solved
 	- git rebase --continue
 
+## MERGE
+Do rebase first. Otherwise there will be mess in logs. 
 
-##DISPLAYING
+- git checkout feature-branch
+- git merge master
+
+## DISPLAYING
 - branches
 	- git branch <- local
 	- git branch -r <- remote
 	- git branch -a <- all
 
-##OTHERS
+- logs
+	- git log --oneline
+
+
+## UNDO (https://www.nobledesktop.com/learn/git/undo-changes)
+- uncommited 
+	- 
+##OT
+HERS
 - joing two commits
 	- git reset --soft HEAD\~2
 	- git commit
@@ -38,8 +51,6 @@
 - see what is in a stash:
 	- git stash show
 
-- one line logs
-	- git log --pretty=oneline
 
 
 - man kann ein Issue mit dem Kommentar in commit z.B. git commit -m "add funcionality. closes #1" schließen 
