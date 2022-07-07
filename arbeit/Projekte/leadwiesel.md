@@ -23,8 +23,17 @@
 
 
 ## DATA EINTRAGEN
-Anruf
+Anrufliste
 	- In der sales Tabelle muss ich next_call Spalte ändern. User_id, für die Eintrag, soll 313 sein.
+
+Eine SQL Kommand um die Einträge automatisch zu wechseln
+	- **docker exec -it lw2-container_db_1 bash** - docker container eintretten
+	- **psql -l** - zeig eine Liste von Datenbanken
+	- **psql -d leadwiesel2 -U root -W** - die Daten Bank einzulogen
+	- **postgres** - passwort
+	- **\d** - zeig jede Tabelle in einem Schema
+	- **update sales m set user_id = 313, next_call = (select a.created_at from sales a where a.id = m.id) where id < 11700;** - update Eintrage
+
 
 
 ## LARAVEL
@@ -56,8 +65,13 @@ https://stackoverflow.com/questions/54721576/laravel-route-apiresource-differenc
 			"2020-01-14": [0]
 		}
 
+### AUF ANRUFLISTE
+- 
 
 
 
 
-Arbeitzeit + 2h 40min
+LOG
+	07.07.2022
+	1. Wenn ich zu der Anrufliste Einträge hinzufuge, die schon da sind, werden sie nicht hinzugefügt.
+	2.  

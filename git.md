@@ -33,10 +33,12 @@ Do rebase first. Otherwise there will be mess in logs.
 
 
 ## UNDO (https://www.nobledesktop.com/learn/git/undo-changes)
-- uncommited 
-	- 
-##OT
-HERS
+- uncommited file 
+	- git checkout filename.html
+- reset all uncommited changes
+	- git reset --hard <commit_hash>
+
+##OTHERS
 - joing two commits
 	- git reset --soft HEAD\~2
 	- git commit
