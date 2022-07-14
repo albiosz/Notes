@@ -2,10 +2,11 @@
 1. Laravel - https://laravel.com
 	- composer https://getcomposer.org
 2. Nuxt - https://nuxtjs.org
-	- Vue - https://vuejs.org
+	- Vue - https://v2.vuejs.org/
 	- Vuex - store - https://vuex.vuejs.org/guide
 	- Vuetifyjs - https://nuxtjs.org/docs
 	- axios - https://axios.nuxtjs.org/usage/
+	- icons - https://icon-sets.iconify.design/mdi/list-status/
 
 
 # SETUP
@@ -50,6 +51,11 @@ https://stackoverflow.com/questions/54721576/laravel-route-apiresource-differenc
 
 
 ## TODO
+- Erstell eine neue Sektion "Erledigt" mit erledigte Anrufe unten alle schon bestehende Sektione
+- Warum die Tasten sind in aderer Reihenfolge?
+	- 
+- Warum eine Taste ist außen v-container?
+	- 
 
 ### Anrufliste
 - Wenn man auf der Liste klickt, offnet es sich nicht mehr, nur Knopf [x]
@@ -66,12 +72,22 @@ https://stackoverflow.com/questions/54721576/laravel-route-apiresource-differenc
 		}
 
 ### AUF ANRUFLISTE
-- 
 
 
 
 
 LOG
-	07.07.2022
+
+- 07.07.2022
 	1. Wenn ich zu der Anrufliste Einträge hinzufuge, die schon da sind, werden sie nicht hinzugefügt.
-	2.  
+
+- 11.07.2022
+	1. Die Punkte mit der Anzahl der Anrufe "Zu terminieren" und "Zu früh" wurden hinzugefügt. <br/>
+	<img src="./leadwiesel/anzahl-der-anrufe.png" />
+
+- 12.07.2022
+	1. Eine Datei mit Constants erstellt
+
+- 13.07
+	1. Wenn man jetzt eine Eintrag löscht, gibt es ein Dialog mit einer Frage, ob der Benutzer sicher ist, dass er die Eintrag löschen will.
+		- vue scoped slots (https://v2.vuejs.org/v2/guide/components-slots.html#Scoped-Slots)

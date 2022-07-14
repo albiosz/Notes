@@ -1,3 +1,6 @@
+## COMMIT
+- amend commit
+	- git commit --amend <- opens text editor with commit 
 
 ## REMOVING
 - remove file from git add
@@ -5,7 +8,6 @@
 - remove branch
 	- locally
 		git branch -d localBranchName
-
  	- remotely
 		git push origin --delete remoteBranchName
 
@@ -17,10 +19,12 @@
 	- git rebase --continue
 
 ## MERGE
-Do rebase first. Otherwise there will be mess in logs. 
+- Do rebase first. Otherwise there will be mess in logs. 
+	- git checkout feature-branch
+	- git merge master
 
-- git checkout feature-branch
-- git merge master
+- Undo merge
+	- git reset --merge a9fdeb5
 
 ## DISPLAYING
 - branches
@@ -38,7 +42,7 @@ Do rebase first. Otherwise there will be mess in logs.
 - reset all uncommited changes
 	- git reset --hard <commit_hash>
 
-##OTHERS
+## OTHERS
 - joing two commits
 	- git reset --soft HEAD\~2
 	- git commit
