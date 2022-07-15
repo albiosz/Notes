@@ -16,11 +16,13 @@
 	- frontend - git clone "M:\WEB\Lead Wiesel\Umsetzung\lw2-frontend.git"
 
 
-
 1. lw2-container, die Datenbank starten
 	- der Ordner eintreten
 	- docker-compose up
-2. 
+2. lw2-backend
+	- wie eine App in normalem PHP
+3. lw2-frontend
+	- npm run dev
 
 
 ## DATA EINTRAGEN
